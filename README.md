@@ -29,7 +29,8 @@ To define class call the `Class` function and pass constructor:
     // Instantiate it
     var myObject = new MyClass();
 
-You can pass params when creating instance and initialize your object inside constructor:
+Constructor is one and only place to define your methods.
+You can also pass params when creating instance and initialize attributes.
 
     var MyClass = Class(function(self, sup, myParam) {
         // Here comes initialisation:
@@ -138,7 +139,7 @@ Inside constructor function `self` is current object, `sup` is super object and 
 Returns new class that inherits from 'baseClasses' and is constructed with constructor function.
 
 To instantiate class use `new` keyword on class: `o = new C(args...);`.
-At first constructor function is invoked on classes bottom-up to construct the object.
+At first constructor functions are invoked on classes bottom-up to construct the object.
 When object is fully constructed and it has `__init__` method, it is called with initial arguments. 
 
 Use `__init__` method to initialize your object using MRO.
@@ -157,4 +158,15 @@ Other notes
 -----------
 
 JsMRO use `__class__` attribute on your objects and `__mro__`, `__id__` and `__initializer__` on classes.
-Do not use them, or you 'll mess everything up.
+Do not use them, or you 'll mess everything up. 
+
+Do not define your methods anywhere outside constructor.
+
+
+TESTS
+=====
+
+To run tests download whole project and visit tests.html with you browser.
+Current version has been tested with Chrome 24, FireFox 20 and IE 9.
+All tests pass. 
+
