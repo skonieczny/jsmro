@@ -14,17 +14,19 @@ test('TEST constructor', function() {
 
 test('TEST init', function() {
     var A = Class(function(self, sup) {
-        self.__init__ = function(x) {
+        self.__init__ = function(x, y) {
             self.a = x;
+            self.b = y;
         };
         self.f = function() {
             return self.a;  
         };
     });
 
-    var a = new A(15);
+    var a = new A(15, 44);
     equal(15, a.a);
     equal(15, a.f());
+    equal(44, a.b)
 });
 
 test('TEST simple inheritance', function() {

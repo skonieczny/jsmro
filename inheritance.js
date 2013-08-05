@@ -74,7 +74,7 @@
             }
 
             if (self.__init__ !== undefined) {
-                self.__init__(args);
+                self.__init__.apply(null, args);
             }
         };
         constructor.__id__ = class_counter;
