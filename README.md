@@ -168,5 +168,6 @@ TESTS
 
 To run tests download whole project and visit tests.html with you browser.
 Current version has been tested with Chrome 24, FireFox 20 and IE 9.
-All tests pass. 
+
+Travis status: (https://travis-ci.org/stanislaw-skonieczny/jsmro.svg?branch=master)](https://travis-ci.org/stanislaw-skonieczny/jsmro)
 
